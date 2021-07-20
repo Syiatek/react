@@ -10,9 +10,10 @@ class JeuxCategory extends Component{
     render(){
         console.log("je passe dans le render");
         return(
-            <div>
-               JeuxCategory
-            </div>)
-    }
+            <tr>
+                <th colSpan="2"></th>
+                {this.props.category}
+            </tr>
+        )}
 }
 export default JeuxCategory;

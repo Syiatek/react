@@ -3,16 +3,26 @@ import React , {Component} from 'react';
 class JeuRow extends Component{
     constructor(props){
         super(props);
-        console.log("je passe dans le constructor");
+        console.log("le jeu", props.jeu);
     
     }
-    
     render(){
-        console.log("je passe dans le render");
+        let name;
+        if(this.props.jeu.stocked){
+             name = this.props.jeu.name;
+            
+        }else{
+          name = <span style={{color:"red"}}>{this.props.jeu.name}</span>;
+        }
+        
+
         return(
-            <div style={{"backgroundColor":"blue"}}>
-               JeuRow
-            </div>)
+            <tr>
+                <td>{name}</td>
+                <td>{this.props.jeu.price}</td>
+                
+                
+            </tr>)
     }
 }
 export default JeuRow;

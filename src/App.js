@@ -14,7 +14,13 @@ onInputChange(val){
 }
 
   render() {
-    const JEUX = []
+    const JEUX = [];
+    JEUX.push({category:"FPS", price:"10€", stocked:true, name:"Counter Strike",});
+    JEUX.push({category:"FPS", price:"40€", stocked:false, name:"battleField",});
+    JEUX.push({category:"FPS", price:"10€", stocked:true, name:"Pubg",});
+    JEUX.push({category:"Aventure", price:"10€", stocked:true, name:"Tomb raider",});
+    JEUX.push({category:"Aventure", price:"30€", stocked:false, name:"uncharted",});
+    JEUX.push({category:"Aventure", price:"50€", stocked:true, name:"Zelda",});
   return (
     <div className="App">
       <header className="App-header">
