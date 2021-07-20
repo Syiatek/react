@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import {PureCompo, PureCompoProps} from './compoPerso/PureCompo';
-import StateCompo from './compoPerso/stateCompo';
-import CompoCycleDeVie from './compoPerso/CompoCycleDeVie';
+// import {PureCompo, PureCompoProps} from './compoPerso/PureCompo';
+// import StateCompo from './compoPerso/stateCompo';
+// import CompoCycleDeVie from './compoPerso/CompoCycleDeVie';
+import FilterableJeuxTable from './compoPerso/jeux/FilterablejeuxTable';
+// import {FilterableJeuxTable, JeuxTable, JeuxCategory, JeuRow} from "./compoPerso/jeux";
 
 
 class App extends Component {
@@ -12,10 +14,16 @@ onInputChange(val){
 }
 
   render() {
+    const JEUX = []
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+
+       <FilterableJeuxTable jeux={JEUX}/>
+
+
+
+        {/* <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -30,7 +38,7 @@ onInputChange(val){
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
+        </a> */}
       </header>
     </div>
   );
